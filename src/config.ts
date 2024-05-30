@@ -3,6 +3,7 @@ import { ConfigModule } from "@nestjs/config";
 import { FutureController } from "@app/future/future.controller";
 
 import { FutureService } from "@app/future/future.service";
+import { BotService } from "@app/bot/bot.service";
 
 export const appModules = {
     imports: [
@@ -15,6 +16,6 @@ export const appModules = {
         FutureController
     ],
     providers: [
-        FutureService
+        FutureService, BotService
     ]
 }
