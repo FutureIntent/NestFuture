@@ -1,8 +1,10 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import TelegramBot from 'node-telegram-bot-api';
+const TelegramBot = require('node-telegram-bot-api');
+
 
 @Injectable()
 export class BotService implements OnModuleInit {
+  public bot: typeof TelegramBot | undefined = undefined;
 
   onModuleInit() {
     this.initialise()
@@ -10,8 +12,7 @@ export class BotService implements OnModuleInit {
 
   initialise() {
     const token = 'YOUR_TELEGRAM_BOT_TOKEN';
-    const bot = new TelegramBot(token, { polling: true });
 
-    
+    this.bot = new TelegramBot(token, { polling: true });
   }
 }
