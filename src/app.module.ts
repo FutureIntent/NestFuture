@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { appModules } from '@app/config';
+import { IndexController } from './index/index.controller';
 
 @Module({
   imports: appModules.imports,

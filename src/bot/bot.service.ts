@@ -11,8 +11,8 @@ export class BotService implements OnModuleInit {
   }
 
   initialise() {
-    const token = 'YOUR_TELEGRAM_BOT_TOKEN';
+    // const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 
-    this.bot = new TelegramBot(token, { polling: true });
+    // this.bot = new TelegramBot(token, { polling: true });
   }
 }

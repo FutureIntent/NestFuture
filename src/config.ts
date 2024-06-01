@@ -1,5 +1,6 @@
 import { ConfigModule } from "@nestjs/config";
 
+import { IndexController } from "@app/index/index.controller";
 import { FutureController } from "@app/future/future.controller";
 import { BotController } from "@app/bot/bot.controller";
 
@@ -14,7 +15,7 @@ export const appModules = {
         })
     ],
     controllers: [
-        FutureController, BotController
+        IndexController, FutureController, BotController
     ],
     providers: [
         FutureService, BotService
